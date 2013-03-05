@@ -1,0 +1,10 @@
+c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\bin\WebAPI.dll
+c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\bin\WebAPI.pdb
+c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\ResolveAssemblyReference.cache
+c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\WebAPI.dll
+c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+C:\mygit\WEBAPI\WebAPI\bin\WebAPI.dll
+C:\mygit\WEBAPI\WebAPI\bin\WebAPI.pdb
+C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.dll
+C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.pdb

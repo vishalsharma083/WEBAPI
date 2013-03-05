@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebAPI.LocationService" CodeBehind="LocationService.svc.cs"  Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
