@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -17,7 +17,7 @@ namespace WebAPI
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class LocationService : ILocationService
     {
-        public string GetLocationBasedOnGeoPosition(double geoLongitude, double geoLatitude)
+        public string getLocationBasedOnGeoPosition(double geoLongitude, double geoLatitude)
         {
             string geoDetails = string.Empty;
             if (geoLongitude < 1)
@@ -31,7 +31,7 @@ namespace WebAPI
             using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["connectionString"].ToString()))
             {
                 conn.Open();
-                string sqlSelect = "SELECT TOP 1 [Code],[AirportCityName],[CountryCode],[StateCode],[NickName],[TimeZone],[Longitude],[Latitude] FROM [DTAirportCity] where Latitude is not null ORDER BY ABS( Latitude - " + geoLatitude + " ) + ABS( Longitude - " + geoLongitude + " )";
+                string sqlSelect = "SELECT TOP 1 [Code],[AirportCityName],[CountryCode],[StateCode],[TimeZone],[Longitude],[Latitude] FROM [DTAirportCity] where Latitude is not null ORDER BY ABS( Latitude - " + geoLatitude + " ) + ABS( Longitude - " + geoLongitude + " )";
                 SqlCommand cmd = new SqlCommand(sqlSelect, conn);
                 SqlDataReader rdr = cmd.ExecuteReader();
                 geoDetails += "{";
@@ -45,8 +45,6 @@ namespace WebAPI
                     geoDetails += "\"" + rdr["CountryCode"] + "\",";
                     geoDetails += "\"StateCode\":";
                     geoDetails += "\"" + rdr["StateCode"] + "\",";
-                    geoDetails += "\"LocationNickName\":";
-                    geoDetails += "\"" + rdr["NickName"] + "\",";
                     geoDetails += "\"TimeZone\":";
                     geoDetails += "\"" + rdr["TimeZone"] + "\",";
                     geoDetails += "\"Longitude\":";
@@ -60,13 +58,13 @@ namespace WebAPI
             return geoDetails;
         }
 
-        public string getLocationBasedOnIP(string ResponseString, string curIP)
+        public string getGeoPositionFromIPAddress(string IpAddress)
         {
             string locationIP = string.Empty;
             string locationName = string.Empty;
-            if (!string.IsNullOrEmpty(curIP))
+            if (!string.IsNullOrEmpty(IpAddress))
             {
-                locationIP = curIP;
+                locationIP = IpAddress;
             }
             else
             {
@@ -81,26 +79,6 @@ namespace WebAPI
                 }
             }
             string IP2LocationProviders = System.Configuration.ConfigurationManager.GetSection("IP2LocationProvider").ToString();
-            //string IP2LocationPrefix = IP2LocationProviders[0]["BaseURL"].ToString();
-            //string IP2LocationSuffix = IP2LocationProviders[0]["ExtendedURL"].ToString();
-            //string locationName = "{'" + ResponseString + "':''}";
-            //string IP2LocationProvider = IP2LocationPrefix + locationIP + IP2LocationSuffix;
-            //try
-            //{
-            //    HttpWebRequest request = WebRequest.Create(IP2LocationProvider) as HttpWebRequest;
-            //    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-            //    {
-            //        if (response != null)
-            //        {
-            //            StreamReader reader = new StreamReader(response.GetResponseStream());
-            //            locationName = reader.ReadToEnd();
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    //
-            //}
             return locationName;
         }
     }
