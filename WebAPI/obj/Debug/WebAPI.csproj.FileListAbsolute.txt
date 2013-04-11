@@ -3,8 +3,8 @@ c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\bin\WebAPI
 c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\ResolveAssemblyReference.cache
 c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 c:\users\p.p.j1s3\documents\visual studio 2010\Projects\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
-C:\mygit\WEBAPI\WebAPI\bin\WebAPI.dll
-C:\mygit\WEBAPI\WebAPI\bin\WebAPI.pdb
-C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
-C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.dll
-C:\mygit\WEBAPI\WebAPI\obj\Debug\WebAPI.pdb
+E:\GitHub\WEBAPI\WebAPI\bin\WebAPI.dll
+E:\GitHub\WEBAPI\WebAPI\bin\WebAPI.pdb
+E:\GitHub\WEBAPI\WebAPI\obj\Debug\ResolveAssemblyReference.cache
+E:\GitHub\WEBAPI\WebAPI\obj\Debug\WebAPI.dll
+E:\GitHub\WEBAPI\WebAPI\obj\Debug\WebAPI.pdb

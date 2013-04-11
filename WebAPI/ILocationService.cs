@@ -14,6 +14,10 @@ namespace WebAPI
     {
         [OperationContract]
         [WebGet(UriTemplate = "/getLocationBasedOnGeoPosition?geoLongitude={geoLongitude}&geoLatitude={geoLatitude}", ResponseFormat = WebMessageFormat.Json)]
-        string GetLocationBasedOnGeoPosition(double geoLongitude, double geoLatitude);
+        string getLocationBasedOnGeoPosition(double geoLongitude, double geoLatitude);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/getGeoPositionFromIPAddress?IpAdderss={IpAddress}", ResponseFormat = WebMessageFormat.Json)]
+        string getGeoPositionFromIPAddress(string IpAddress);
     }
 }
